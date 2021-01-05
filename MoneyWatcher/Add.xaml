@@ -1,0 +1,18 @@
+﻿<UserControl x:Class="MoneyWatcher.Add"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MoneyWatcher"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="929">
+    <Grid>
+        <DatePicker HorizontalAlignment="Center" Margin="429,108,198,0" VerticalAlignment="Top" RenderTransformOrigin="-0.324,2.312" Width="302"/>
+        <TextBlock x:Name="Amount" HorizontalAlignment="Left" Margin="200,188,0,0" TextWrapping="Wrap" Text="Amount" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.367,0.566"/>
+        <TextBox x:Name="amountText" HorizontalAlignment="Left" Margin="429,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" RenderTransformOrigin="0.312,-1.795" FontSize="30" TextAlignment="Center"/>
+        <TextBlock x:Name="Category" HorizontalAlignment="Left" Margin="200,288,0,0" TextWrapping="Wrap" Text="Category" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.367,0.566"/>
+        <TextBox x:Name="categoryText" HorizontalAlignment="Left" Margin="429,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" RenderTransformOrigin="0.312,-1.795" FontSize="30" TextAlignment="Center"/>
+        <Button Content="Submit" HorizontalAlignment="Left" Margin="631,400,0,0" VerticalAlignment="Top" FontSize="30" Click="Button_Click"/>
+
+    </Grid>
+</UserControl>

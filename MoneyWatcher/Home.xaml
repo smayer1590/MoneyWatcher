@@ -1,0 +1,102 @@
+﻿<UserControl x:Class="MoneyWatcher.Home"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:MoneyWatcher" 
+             d:DataContext="{d:DesignInstance Type=local:Bar}"
+             mc:Ignorable="d" 
+             d:DesignHeight="600" d:DesignWidth="929">
+    <Grid>
+        <Button x:Name="Profile" HorizontalAlignment="Left" 
+                        Margin="100,50,0,0" 
+                        VerticalAlignment="Top" 
+                        Width="100" 
+                        BorderThickness="0">
+            <Image Source="Assets/character.png"/>
+        </Button>
+        <TextBox HorizontalAlignment="Left" 
+                         Height="23" 
+                         Margin="96,155,0,0" 
+                         TextWrapping="Wrap" 
+                         Text="TextBox" 
+                         VerticalAlignment="Top" 
+                         Width="104" />
+
+        <TextBox x:Name="monthSpent" HorizontalAlignment="Center"
+                         Margin="302,67,318,0" 
+                         TextWrapping="Wrap" 
+                         Text="$1049.37" 
+                         VerticalAlignment="Top" 
+                         Background="#FFABDEBB" 
+                         FontSize="60" FontFamily="Lucida Sans Unicode"
+                         FontWeight="Bold">
+            <TextBox.Resources>
+                <Style TargetType="{x:Type Border}">
+                    <Setter Property="CornerRadius" Value="10"/>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBlock x:Name="MonthlyTotalText" 
+                       HorizontalAlignment="Center" 
+                       Margin="341,17,346,0" 
+                           TextWrapping="Wrap" 
+                           Text="Monthly Spent So Far" 
+                           VerticalAlignment="Top"
+                           Height="40" 
+                           FontSize="30" 
+                           FontFamily="Lucida Sans Unicode" 
+                           TextDecorations="{x:Null}"/>
+
+
+        <Border x:Name="ColumnBar" Height="240"  VerticalAlignment="Top"  Margin="57,257,56,0" Background="White"
+                BorderBrush="Gray" CornerRadius="12" Width="816">
+
+            <Grid HorizontalAlignment="Right" Width="816">
+                <StackPanel Orientation="Horizontal" Height="200" VerticalAlignment="Bottom">
+                    <local:Bar x:Name="Bar1" Background="#FF4455AA" Margin="24,0" VerticalAlignment="Bottom"/>
+                    <local:Bar x:Name="Bar2" Background="#FF4455AA" Margin="24,0" VerticalAlignment="Bottom"/>
+                    <local:Bar x:Name="Bar3" Background="#FF4455AA" Margin="24,0" VerticalAlignment="Bottom"/>
+                    <local:Bar x:Name="Bar4" Background="#FF4455AA" Margin="24,0" VerticalAlignment="Bottom"/>
+                    <local:Bar x:Name="Bar5" Background="#FF4455AA" Margin="24,0" VerticalAlignment="Bottom"/>
+                    <local:Bar x:Name="Bar6" Background="#FF4455AA" Margin="24,0" VerticalAlignment="Bottom"/>
+                    <local:Bar x:Name="Bar7" Background="#FF4455AA" Margin="24,0" VerticalAlignment="Bottom"/>
+                    <local:Bar x:Name="Bar8" Background="#FF4455AA" Margin="24,0" VerticalAlignment="Bottom"/>
+                    <local:Bar x:Name="Bar9" Background="#FF4455AA" Margin="24,0" VerticalAlignment="Bottom"/>
+                    <local:Bar x:Name="Bar10" Background="#FF4455AA" Margin="24,0" VerticalAlignment="Bottom"/>
+                    <local:Bar x:Name="Bar11" Background="#FF4455AA" Margin="24,0" VerticalAlignment="Bottom"/>
+                    <local:Bar x:Name="Bar12" Background="#FF4455AA" Margin="24,0" VerticalAlignment="Bottom"/>
+                </StackPanel>
+
+                <TextBlock x:Name="amount1" Width="68" Margin="0,0,748,220"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Franklin Gothic Demi Cond" TextAlignment="Center" FontSize="14"/>
+                <TextBlock x:Name="amount2" Width="68" Margin="68,0,680,220"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Franklin Gothic Demi Cond" TextAlignment="Center" FontSize="14"/>
+                <TextBlock x:Name="amount3" Width="68" Margin="136,0,612,220" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Franklin Gothic Demi Cond" TextAlignment="Center" FontSize="14"/>
+                <TextBlock x:Name="amount4" Width="68" Margin="204,0,544,220" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Franklin Gothic Demi Cond" TextAlignment="Center" FontSize="14"/>
+                <TextBlock x:Name="amount5" Width="68" Margin="272,0,476,220" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Franklin Gothic Demi Cond" TextAlignment="Center" FontSize="14"/>
+                <TextBlock x:Name="amount6" Width="68" Margin="340,0,408,220" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Franklin Gothic Demi Cond" TextAlignment="Center" FontSize="14"/>
+                <TextBlock x:Name="amount7" Width="68" Margin="408,0,340,220" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Franklin Gothic Demi Cond" TextAlignment="Center" FontSize="14"/>
+                <TextBlock x:Name="amount8" Width="68" Margin="476,0,272,220" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Franklin Gothic Demi Cond" TextAlignment="Center" FontSize="14"/>
+                <TextBlock x:Name="amount9" Width="68" Margin="544,0,204,220" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Franklin Gothic Demi Cond" TextAlignment="Center" FontSize="14"/>
+                <TextBlock x:Name="amount10" Width="68" Margin="612,0,136,220" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Franklin Gothic Demi Cond" TextAlignment="Center" FontSize="14"/>
+                <TextBlock x:Name="amount11" Width="68" Margin="680,0,68,220" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Franklin Gothic Demi Cond" TextAlignment="Center" FontSize="14"/>
+                <TextBlock x:Name="amount12" Width="68" Margin="748,0,0,220" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Franklin Gothic Demi Cond" TextAlignment="Center" FontSize="14"/>
+                
+                <TextBlock Text="January" Width="68" Margin="0,245,748,-21"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Franklin Gothic Demi Cond" TextAlignment="Center" FontSize="14"/>
+                <TextBlock Text="February" Width="68" Margin="68,245,680,-21"  HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Franklin Gothic Demi Cond" TextAlignment="Center" FontSize="14"/>
+                <TextBlock Text="March" Width="68" Margin="136,245,612,-21" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Franklin Gothic Demi Cond" TextAlignment="Center" FontSize="14"/>
+                <TextBlock Text="April" Width="68" Margin="204,245,544,-21" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Franklin Gothic Demi Cond" TextAlignment="Center" FontSize="14"/>
+                <TextBlock Text="May" Width="68" Margin="272,245,476,-21" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Franklin Gothic Demi Cond" TextAlignment="Center" FontSize="14"/>
+                <TextBlock Text="June" Width="68" Margin="340,245,408,-21" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Franklin Gothic Demi Cond" TextAlignment="Center" FontSize="14"/>
+                <TextBlock Text="July" Width="68" Margin="408,245,340,-21" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Franklin Gothic Demi Cond" TextAlignment="Center" FontSize="14"/>
+                <TextBlock Text="August" Width="68" Margin="476,245,272,-21" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Franklin Gothic Demi Cond" TextAlignment="Center" FontSize="14"/>
+                <TextBlock Text="September" Width="68" Margin="544,245,204,-21" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Franklin Gothic Demi Cond" TextAlignment="Center" FontSize="14"/>
+                <TextBlock Text="October" Width="68" Margin="612,245,136,-21" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Franklin Gothic Demi Cond" TextAlignment="Center" FontSize="14"/>
+                <TextBlock Text="November" Width="68" Margin="680,245,68,-21" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Franklin Gothic Demi Cond" TextAlignment="Center" FontSize="14"/>
+                <TextBlock Text="December" Width="68" Margin="748,245,0,-21" HorizontalAlignment="Center" VerticalAlignment="Center" FontFamily="Franklin Gothic Demi Cond" TextAlignment="Center" FontSize="14"/>
+
+            </Grid>
+        </Border>
+
+        
+    </Grid>
+</UserControl>
