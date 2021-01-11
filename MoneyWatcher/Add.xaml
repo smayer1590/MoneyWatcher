@@ -7,12 +7,15 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="929">
     <Grid>
-        <DatePicker HorizontalAlignment="Center" Margin="429,108,198,0" VerticalAlignment="Top" RenderTransformOrigin="-0.324,2.312" Width="302"/>
-        <TextBlock x:Name="Amount" HorizontalAlignment="Left" Margin="200,188,0,0" TextWrapping="Wrap" Text="Amount" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.367,0.566"/>
-        <TextBox x:Name="amountText" HorizontalAlignment="Left" Margin="429,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" RenderTransformOrigin="0.312,-1.795" FontSize="30" TextAlignment="Center"/>
-        <TextBlock x:Name="Category" HorizontalAlignment="Left" Margin="200,288,0,0" TextWrapping="Wrap" Text="Category" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.367,0.566"/>
-        <TextBox x:Name="categoryText" HorizontalAlignment="Left" Margin="429,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" RenderTransformOrigin="0.312,-1.795" FontSize="30" TextAlignment="Center"/>
-        <Button Content="Add" HorizontalAlignment="Left" Margin="631,400,0,0" VerticalAlignment="Top" FontSize="30" Click="Button_Click"/>
+        <DatePicker x:Name="date" HorizontalAlignment="Center" Margin="427,99,200,0" VerticalAlignment="Top" RenderTransformOrigin="-0.324,2.312" Width="302" FontSize="20"/>
+        <TextBlock HorizontalAlignment="Left" Margin="200,188,0,0" TextWrapping="Wrap" Text="Amount" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.367,0.566"/>
+        <TextBox x:Name="amount" HorizontalAlignment="Left" Margin="429,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" RenderTransformOrigin="0.312,-1.795" FontSize="30"/>
+        <TextBlock HorizontalAlignment="Left" Margin="200,288,0,0" TextWrapping="Wrap" Text="Category" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.367,0.566"/>
+        <TextBox x:Name="category" HorizontalAlignment="Left" Margin="429,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" RenderTransformOrigin="0.312,-1.795" FontSize="30"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="649,366,0,0" VerticalAlignment="Top" FontSize="30" Click="Button_Click" Height="50" Width="80" RenderTransformOrigin="0.856,-0.23"/>
+        <TextBlock x:Name="noAmount" HorizontalAlignment="Left" Margin="472,222,0,0" TextWrapping="Wrap" Text="Amount cannot be empty!" VerticalAlignment="Top" Height="26" Width="257" FontSize="20" Foreground="Red" FontWeight="Bold" TextAlignment="Right" Visibility="Hidden"/>
+        <TextBlock x:Name="notDecimal" HorizontalAlignment="Left" Margin="472,222,0,0" TextWrapping="Wrap" Text="Please input a decimal number" VerticalAlignment="Top" Height="26" Width="257" FontSize="20" Foreground="Red" FontWeight="Bold" TextAlignment="Right" Visibility="Hidden"/>
+        <TextBlock x:Name="successful" HorizontalAlignment="Left" Margin="429,385,0,0" TextWrapping="Wrap" Text="Successfully Added!" VerticalAlignment="Top" RenderTransformOrigin="4.408,1.344" Height="31" Width="196" FontSize="20" TextAlignment="Right" FontWeight="Bold" Foreground="#FF45950E" Visibility="Hidden"/>
 
     </Grid>
 </UserControl>
