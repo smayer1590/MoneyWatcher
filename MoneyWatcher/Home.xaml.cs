@@ -21,10 +21,11 @@ namespace MoneyWatcher
     /// </summary>
     public partial class Home : UserControl
     {
-        public Home()
+        string user;
+        public Home(string user)
         {
             InitializeComponent();
-
+            this.user = user;
             string currentMonth = DateTime.Now.Month.ToString();
             string currentYear = DateTime.Now.Year.ToString();
 
@@ -36,11 +37,12 @@ namespace MoneyWatcher
             double max = 0;
             for (int i = 0; i < 12; ++i)
             {
-                string command = "Select sum(amount) as sum from spent where YEAR(date) = @currentYear and MONTH(date) = @month;";
+                string command = "Select sum(amount) as sum from [dbo].[spent] where YEAR([date]) = @currentYear and MONTH([date]) = @month and [user] = @username;";
                 string month = (i + 1).ToString();
                 SqlCommand ocmd = new SqlCommand(command, cn_connection);
                 ocmd.Parameters.AddWithValue("@currentYear", currentYear);
                 ocmd.Parameters.AddWithValue("@month", month);
+                ocmd.Parameters.AddWithValue("@username", user);
                 if (cn_connection.State != ConnectionState.Open) cn_connection.Open();
                 using (SqlDataReader oReader = ocmd.ExecuteReader())
                 {

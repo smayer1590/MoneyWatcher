@@ -7,7 +7,7 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="929">
     <Grid Height="600" Width="929">
-        <Calendar x:Name="calendar" HorizontalAlignment="Left" Margin="80,30,0,0" VerticalAlignment="Top" SelectedDatesChanged="calendar_SelectedDatesChanged" DisplayModeChanged="calendar_DisplayModeChanged" DisplayDateChanged="calendar_DisplayDateChanged"/>
+        <Calendar x:Name="calendar" HorizontalAlignment="Left" Margin="80,30,0,0" VerticalAlignment="Top" SelectedDatesChanged="calendar_SelectedDatesChanged" DisplayModeChanged="Calendar_DisplayModeChanged" DisplayDateChanged="calendar_DisplayDateChanged"/>
 
         <TextBlock x:Name="Date" HorizontalAlignment="Left" Margin="340,37,0,0" TextWrapping="Wrap" Text="Date" VerticalAlignment="Top" FontSize="20" TextAlignment="Center"/>
         <TextBox x:Name="dateText" HorizontalAlignment="Left" Margin="443,30,0,0" TextWrapping="Wrap" Text="2020-12-10" VerticalAlignment="Top" Width="280" FontSize="30" TextAlignment="Center" IsReadOnly="True"/>

@@ -11,7 +11,7 @@
       <Value Profile="(Default)">Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\MoneyWatcher.mdf;Integrated Security=True;Connect Timeout=30</Value>
     </Setting>
     <Setting Name="cn" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mayer\source\repos\MoneyWatcher\MoneyWatcher\Data\MoneyMaker.mdf;Integrated Security=True</Value>
+      <Value Profile="(Default)">Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\mayer\source\repos\MoneyWatcher\MoneyWatcher\Data\MoneyWatcher.mdf;Integrated Security=True</Value>
     </Setting>
   </Settings>
 </SettingsFile>

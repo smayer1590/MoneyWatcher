@@ -112,10 +112,10 @@
     <Grid>
 
         <!--//Background Color //-->
-        <Grid Background="#FFE4AC17">
+        <Grid Background="#FFE4AC17" HorizontalAlignment="Right" Width="994">
+            
             <!--//Main Page //-->
             <Grid x:Name="main" PreviewMouseLeftButtonDown="BG_PreviewMouseLeftButtonDown" Width="929" HorizontalAlignment="Right">
-
             </Grid>
 
             <!--// Navigation Panel //-->
@@ -140,7 +140,7 @@
                                       Height="30"
                                       Width="30"
                                       BorderThickness="0"
-                                      Style="{StaticResource tb_style}" Checked="Tg_btn_Checked"
+                                      Style="{StaticResource tb_style}"
                                       >
                             <ToggleButton.Background>
                                 <ImageBrush ImageSource="Assets/side_bar.png" Stretch="Fill"/>

@@ -37,7 +37,7 @@ namespace MoneyWatcher.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=C:\\Users\\mayer\\source\\repos\\M" +
-            "oneyWatcher\\MoneyWatcher\\Data\\MoneyMaker.mdf;Integrated Security=True")]
+            "oneyWatcher\\MoneyWatcher\\Data\\MoneyWatcher.mdf;Integrated Security=True")]
         public string cn {
             get {
                 return ((string)(this["cn"]));

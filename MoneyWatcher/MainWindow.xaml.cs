@@ -1,4 +1,5 @@
 ﻿using System;
+using System.IO;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,24 +15,33 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Data;
 
+
+using Google.Apis.Auth.OAuth2;
+using Google.Apis.Auth.OAuth2.Flows;
+using Google.Apis.Drive.v2;
+using Google.Apis.Util.Store;
+using System.Data.SqlClient;
+
 namespace MoneyWatcher
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
+    /// 
+    
+
     public partial class MainWindow : Window
     {
+        public static Panel nav;
+        public static string name;
+        public static string user;
         public MainWindow()
         {
             InitializeComponent();
-
-            Home homepage = new Home();
-            main.Children.Add(homepage);
-        }
-
-        private void Tg_btn_Checked(object sender, RoutedEventArgs e)
-        {
-
+            nav = nav_pnl;
+            nav_pnl.Visibility = Visibility.Hidden;
+            LogIn login = new LogIn();
+            main.Children.Add(login);
         }
 
         private void ListViewItem_MouseEnter(object sender, MouseEventArgs e)
@@ -42,9 +52,7 @@ namespace MoneyWatcher
             {
                 tt_home.Visibility = Visibility.Collapsed;
                 tt_calendar.Visibility = Visibility.Collapsed;
-                tt_message.Visibility = Visibility.Collapsed;
-
-                
+                tt_message.Visibility = Visibility.Collapsed;         
             }
             else
             {
@@ -61,19 +69,9 @@ namespace MoneyWatcher
             Tg_btn.IsChecked = false;
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void CalendarNav_MouseDown(object sender, MouseButtonEventArgs e)
-        {
-            
-        }
-
         private void HomeNav_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            Home homepage = new Home();
+            Home homepage = new Home(user);
             if (!main.Children.Contains(homepage))
             {
                 main.Children.Clear();
@@ -83,7 +81,7 @@ namespace MoneyWatcher
 
         private void CalendarNav_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            Calendar calendar = new Calendar();
+            Calendar calendar = new Calendar(user);
             if (!main.Children.Contains(calendar))
             {
                 main.Children.Clear();
@@ -93,12 +91,17 @@ namespace MoneyWatcher
 
         private void AddNav_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            Add add = new Add();
+            Add add = new Add(user);
             if (!main.Children.Contains(add))
             {
                 main.Children.Clear();
                 main.Children.Add(add);
             }
+        }
+
+        internal static void showNav()
+        {
+            nav.Visibility = Visibility.Visible;
         }
     }
 }

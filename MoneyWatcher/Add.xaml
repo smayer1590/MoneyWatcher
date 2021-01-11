@@ -12,7 +12,7 @@
         <TextBox x:Name="amountText" HorizontalAlignment="Left" Margin="429,180,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" RenderTransformOrigin="0.312,-1.795" FontSize="30" TextAlignment="Center"/>
         <TextBlock x:Name="Category" HorizontalAlignment="Left" Margin="200,288,0,0" TextWrapping="Wrap" Text="Category" VerticalAlignment="Top" FontSize="20" RenderTransformOrigin="0.367,0.566"/>
         <TextBox x:Name="categoryText" HorizontalAlignment="Left" Margin="429,280,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="300" RenderTransformOrigin="0.312,-1.795" FontSize="30" TextAlignment="Center"/>
-        <Button Content="Submit" HorizontalAlignment="Left" Margin="631,400,0,0" VerticalAlignment="Top" FontSize="30" Click="Button_Click"/>
+        <Button Content="Add" HorizontalAlignment="Left" Margin="631,400,0,0" VerticalAlignment="Top" FontSize="30" Click="Button_Click"/>
 
     </Grid>
 </UserControl>

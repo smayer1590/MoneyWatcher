@@ -20,8 +20,10 @@ namespace MoneyWatcher
     /// </summary>
     public partial class Add : UserControl
     {
-        public Add()
+        string user;
+        public Add(string user)
         {
+            this.user = user;
             InitializeComponent();
         }
 
