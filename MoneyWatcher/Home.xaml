@@ -8,20 +8,6 @@
              mc:Ignorable="d" 
              d:DesignHeight="600" d:DesignWidth="929">
     <Grid>
-        <Button x:Name="Profile" HorizontalAlignment="Left" 
-                        Margin="100,50,0,0" 
-                        VerticalAlignment="Top" 
-                        Width="100" 
-                        BorderThickness="0">
-            <Image Source="Assets/character.png"/>
-        </Button>
-        <TextBox HorizontalAlignment="Left" 
-                         Height="23" 
-                         Margin="96,155,0,0" 
-                         TextWrapping="Wrap" 
-                         Text="TextBox" 
-                         VerticalAlignment="Top" 
-                         Width="104" />
 
         <TextBox x:Name="monthSpent" HorizontalAlignment="Center"
                          Margin="302,67,318,0" 

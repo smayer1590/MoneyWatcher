@@ -51,14 +51,12 @@ namespace MoneyWatcher
             if (Tg_btn.IsChecked == true)
             {
                 tt_home.Visibility = Visibility.Collapsed;
-                tt_calendar.Visibility = Visibility.Collapsed;
-                tt_message.Visibility = Visibility.Collapsed;         
+                tt_calendar.Visibility = Visibility.Collapsed;     
             }
             else
             {
                 tt_home.Visibility = Visibility.Visible;
                 tt_calendar.Visibility = Visibility.Visible;
-                tt_message.Visibility = Visibility.Visible;
 
                 
             }
